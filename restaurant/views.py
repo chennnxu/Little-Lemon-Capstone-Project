@@ -1,17 +1,14 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 from django.contrib.auth.models import User
 
 from rest_framework.response import Response
 from rest_framework.decorators import api_view, permission_classes
-from rest_framework import generics
+from rest_framework import generics, permissions, viewsets
 from rest_framework.generics import (
     ListCreateAPIView,
     RetrieveUpdateAPIView,
     DestroyAPIView,
 )
-from rest_framework.viewsets import ModelViewSet
-from rest_framework import permissions, viewsets
 from rest_framework.permissions import IsAuthenticated
 
 from .models import Menu, Booking
